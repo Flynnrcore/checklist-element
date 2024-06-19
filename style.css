@@ -1,0 +1,135 @@
+:root {
+    --progress-percent: 10%;
+    --blue: #3579F5;
+    --dark-blue: #2364DB;
+    --white: #FFFFFF; 
+    --white-transparent: rgba(255, 255, 255, 0.5);
+    --dark-white: #F4F8FF;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('font/inter.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.checklist {
+    width: 743px;
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+    padding: 12px 18px 15px 22px;
+
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.checklist-left-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.progressbar {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 50%;
+    background: 
+    radial-gradient(closest-side, var(--blue)  93%, transparent 100%),
+    conic-gradient(var(--white) var(--progress-percent), var(--white-transparent) 0);    
+}
+
+.progress-text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.information p {
+    display: block;
+    margin: 0;
+}
+
+.checklist-frame {
+    width: 76px;
+
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+
+    background-color: var(--dark-blue);
+    border-radius: 40px;
+}
+
+.checklist-header {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.checklist-description {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.checklist-btn {
+    padding: 10px 32px;
+
+    color: #4777ED;
+
+    background: var(--dark-white);
+
+    border: none;
+    border-radius: 6px;
+}
+
+.checklist-btn:hover {
+    opacity: 0.9;
+}
+
+.checklist-btn:active {
+    scale: 0.9;
+}
+
+@media (max-width: 742px) {
+    .checklist {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .checklist-left-block {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 524px) {
+    .checklist-left-block {
+        flex-direction: column;
+    }
+}
